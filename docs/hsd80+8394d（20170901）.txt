@@ -1,0 +1,301 @@
+
+     // Set EXTC
+	   SPI_2825_WrReg(0xBC,4);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xB9);
+       SPI_WriteData(0xFF);
+       SPI_WriteData(0x83);
+       SPI_WriteData(0x94);
+       Delay_ms(20);
+       
+       
+       // Set MIPI            
+       SPI_2825_WrReg(0xBC,2);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xBA);
+       SPI_WriteData(0x73); 
+    
+       
+       // Set POWER       
+       SPI_2825_WrReg(0xBC,16);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xB1);
+       SPI_WriteData(0x6C);
+       SPI_WriteData(0x14);//15
+       SPI_WriteData(0x14);//15
+       SPI_WriteData(0x24);
+       SPI_WriteData(0xE4);
+       SPI_WriteData(0x10);//BTP
+       SPI_WriteData(0xF0);//BTN
+       SPI_WriteData(0x80);
+       SPI_WriteData(0xE4);
+       SPI_WriteData(0xD7);
+       SPI_WriteData(0x23);
+       SPI_WriteData(0x80);
+       SPI_WriteData(0xC0);
+       SPI_WriteData(0xD2);
+       SPI_WriteData(0x58);
+      
+       
+       
+       // Set display       
+       SPI_2825_WrReg(0xBC,12);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xB2);
+       SPI_WriteData(0x80);//INV
+       SPI_WriteData(0x64);
+       SPI_WriteData(0x10);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x70);
+       SPI_WriteData(0x1C);
+       SPI_WriteData(0x08);
+       SPI_WriteData(0x08);
+       SPI_WriteData(0x1C);
+       SPI_WriteData(0x4D);
+       SPI_WriteData(0x00);
+       
+       // Set CYC    
+       SPI_2825_WrReg(0xBC,13);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xB4);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0xFF);
+       SPI_WriteData(0x03);
+       SPI_WriteData(0x5A);
+       SPI_WriteData(0x03);
+       SPI_WriteData(0x5A);
+       SPI_WriteData(0x03);
+       SPI_WriteData(0x5A);
+       SPI_WriteData(0x01);
+       SPI_WriteData(0x6A);
+       SPI_WriteData(0x01);
+       SPI_WriteData(0x6A);
+       
+       // Set VCOM      
+       
+       SPI_2825_WrReg(0xBC,3);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xB6);
+       SPI_WriteData(0x52); 
+       SPI_WriteData(0x52);
+       
+       // Set Panel          
+       SPI_2825_WrReg(0xBC,2);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xcc);
+       SPI_WriteData(0x01);
+       
+       
+       // Set D3       
+       SPI_2825_WrReg(0xBC,31);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xD3);
+       SPI_WriteData(0x00); 
+       SPI_WriteData(0x06);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0x40);
+       SPI_WriteData(0x1A);
+       SPI_WriteData(0x08);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0x32);
+       SPI_WriteData(0x10);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x54);
+       SPI_WriteData(0x15);
+       SPI_WriteData(0x0F);
+       SPI_WriteData(0x05);
+       SPI_WriteData(0x04);
+       SPI_WriteData(0x02);
+       SPI_WriteData(0x12);
+       SPI_WriteData(0x10);
+       SPI_WriteData(0x05);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x33);
+       SPI_WriteData(0x33);
+       SPI_WriteData(0x0B);
+       SPI_WriteData(0x0B);
+       SPI_WriteData(0x37);
+       SPI_WriteData(0x10);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x07);
+       
+       // Set GIP     
+       SPI_2825_WrReg(0xBC,45);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xD5);
+       SPI_WriteData(0x19);
+       SPI_WriteData(0x19);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18); 
+       SPI_WriteData(0x1A);
+       SPI_WriteData(0x1A);
+       SPI_WriteData(0x1B);
+       SPI_WriteData(0x1B);
+       SPI_WriteData(0x04);
+       SPI_WriteData(0x05);
+       SPI_WriteData(0x06);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0x01);
+       SPI_WriteData(0x02);
+       SPI_WriteData(0x03);
+       SPI_WriteData(0x20);
+       SPI_WriteData(0x21);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x22);
+       SPI_WriteData(0x23);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       
+       // Set D6    
+       SPI_2825_WrReg(0xBC,45);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xD6);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x19);
+       SPI_WriteData(0x19); 
+       SPI_WriteData(0x1A);
+       SPI_WriteData(0x1A);
+       SPI_WriteData(0x1B);
+       SPI_WriteData(0x1B);
+       SPI_WriteData(0x03);
+       SPI_WriteData(0x02);
+       SPI_WriteData(0x01);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x06);
+       SPI_WriteData(0x05);
+       SPI_WriteData(0x04);
+       SPI_WriteData(0x23);
+       SPI_WriteData(0x22);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x21);
+       SPI_WriteData(0x20);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x18);
+     
+       // Set Gamma        
+       SPI_2825_WrReg(0xBC,43);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xE0);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0x06);
+       SPI_WriteData(0x0C);
+       SPI_WriteData(0x31); 
+       SPI_WriteData(0x34);
+       SPI_WriteData(0x3F);
+       SPI_WriteData(0x1D);
+       SPI_WriteData(0x41);
+       SPI_WriteData(0x06);
+       SPI_WriteData(0x0A);
+       SPI_WriteData(0x0C);
+       SPI_WriteData(0x17);
+       SPI_WriteData(0x0F);
+       SPI_WriteData(0x12);
+       SPI_WriteData(0x15);
+       SPI_WriteData(0x13);
+       SPI_WriteData(0x14);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x12);
+       SPI_WriteData(0x15);
+       SPI_WriteData(0x16);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0x06);
+       SPI_WriteData(0x0B);
+       SPI_WriteData(0x30);
+       SPI_WriteData(0x34);
+       SPI_WriteData(0x3F);
+       SPI_WriteData(0x1D);
+       SPI_WriteData(0x40);
+       SPI_WriteData(0x07);
+       SPI_WriteData(0x0A);
+       SPI_WriteData(0x0D);
+       SPI_WriteData(0x18);
+       SPI_WriteData(0x0E);
+       SPI_WriteData(0x12);
+       SPI_WriteData(0x14);
+       SPI_WriteData(0x12);
+       SPI_WriteData(0x14);
+       SPI_WriteData(0x08);
+       SPI_WriteData(0x13);
+       SPI_WriteData(0x14);
+       SPI_WriteData(0x19);
+      
+       
+                  
+       // Set D2  
+       SPI_2825_WrReg(0xBC,2);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xD2);
+       SPI_WriteData(0x55);
+       
+       // Set C0
+       SPI_2825_WrReg(0xBC,3);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xC0);
+       SPI_WriteData(0x30);
+       SPI_WriteData(0x14);
+       
+       // Set Power option
+       SPI_2825_WrReg(0xBC,4);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xBF);
+       SPI_WriteData(0x41);
+       SPI_WriteData(0x0E);
+       SPI_WriteData(0x01);
+       
+       // Set TCON Option
+       SPI_2825_WrReg(0xBC,5);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xC7);
+       SPI_WriteData(0x00);
+       SPI_WriteData(0xC0);
+       SPI_WriteData(0x40);
+       SPI_WriteData(0xC0);
+         
+       // Set DF
+       SPI_2825_WrReg(0xBC,2);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0xDF);
+       SPI_WriteData(0x8E);
+       
+       // SLEEP out
+       SPI_2825_WrReg(0xBC,1);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0x11);
+       Delay_ms(120);
+    
+       // display on
+       SPI_2825_WrReg(0xBC,1);SPI_2825_WrCmd(0xBF);
+       SPI_WriteData(0x29);
+       
+       Delay_ms(10);
+
